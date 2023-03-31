@@ -1,0 +1,38 @@
+
+.card {
+    width: 18em;
+    height: 30px;
+    align-items: center;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+
+header {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 58px;
+    font-weight: 900;
+    color: rgb(0, 0, 244);
+}
+
+h5 {
+    text-align: center;
+    align-items: center;
+    font-family:Arial, Helvetica, sans-serif;
+    color: black;
+}
+
+.subtitle {
+    color: black;
+    text-align: center;
+}
+
+.btn-primary {
+    align-items: center;
+    text-align: center;
+    display: flex;
+    
+}
