@@ -42,7 +42,7 @@ let getProducto = () => {
         if (producto == null) {
             reject(new Error("Producto inexistente"))
         }
-        setTimeout(() => { resolve (producto) }, 2000);
+        setTimeout(() => { resolve (producto) }, 3000);
     });
 };
 
