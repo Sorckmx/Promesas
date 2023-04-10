@@ -36,7 +36,7 @@ producto.forEach(producto => {
 });
 
 // Función para prodcutos inexistentes con promesa
-let getProducto = () => {
+/* let getProducto = () => {
 
     return new Promise((resolve, reject) => {
         if (producto == null) {
@@ -44,9 +44,31 @@ let getProducto = () => {
         }
         setTimeout(() => { resolve (producto) }, 3000);
     });
-};
+}; */
 
-//Respuestas de consola sobre los requerimientos de promesa
+function getProducto(){         // Se realiza con fetch
+    let promesa = fetch("https://fakestoreapi.com/products", {
+        method: "GET"
+    });
+
+    promesa.then( (response) => {
+        response.json().then( (prods) => {
+                //make a Cards (prods);
+                console.log("prods=>json()");
+                console.log(prods);
+            }   //prods 
+        )   // then json
+        .catch( (err) => {
+            console.error("Error en el formato de la respuesta: " + err.message)
+        }); //catch json
+    }       //response
+    )       //then
+    .catch( (error) => {
+        console.error("Error en la respuesta: " + error.message);
+    });     //catch promesa
+}
+
+/* //Respuestas de consola sobre los requerimientos de promesa
 getProducto()
     .then((prod)=> console.log(prod))
-    .catch((err)=> console.log(err.message));
+    .catch((err)=> console.log(err.message)); */
